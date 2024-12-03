@@ -1,7 +1,7 @@
 import { memo, MouseEvent } from "react";
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import { iconList, IconType } from './icons';
+import { iconList } from './icons';
 import Particle from './Particle';
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
