@@ -15,7 +15,7 @@ type Props = {
  */
 const Card = ({ children, title, content = "", url = "#" }: Props) => {
   return (
-    <a className="xl:w-1/3 md:w-1/2 p-4" target="_blank" href={url}>
+    <a className="xl:w-1/3 md:w-1/2 p-4" rel="noopener noreferrer" target="_blank" href={url}>
       <div className="border border-gray-200 p-6 rounded-lg transition duration-200 shadow-md hover:shadow-lg">
         <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-green-100 text-green-500 mb-4">
           {children}
