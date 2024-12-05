@@ -91,6 +91,7 @@ const Slider = () => {
 
               {postList.map((pos, index) => (
                 <motion.div
+                  key={index}
                   className="slider-li relative top-0"
                   initial={index === 0 || index === (postList.length - 1) ? false : { x: posConfigs[0].x }}
                   animate={{ x: posConfigs[pos].x }}

@@ -4,14 +4,14 @@ import { IconType } from './icons';
 import Card from './Card';
 
 const bubbles = [
-  { x: -100, y: 0 },
-  { x: 100, y: 0 },
-  { x: 0, y: 100 },
-  { x: 0, y: -100 },
-  { x: 80, y: 70 },
-  { x: 80, y: -70 },
-  { x: -80, y: -70 },
-  { x: -80, y: 70 },
+  { x: -150, y: 0 },
+  { x: 150, y: 0 },
+  { x: 0, y: 150 },
+  { x: 0, y: -150 },
+  { x: 120, y: 110 },
+  { x: 120, y: -110 },
+  { x: -120, y: -110 },
+  { x: -120, y: 110 },
 ];
 
 type Props = {
@@ -58,9 +58,9 @@ const Particle = ({ pos, Icon }: Props) => {
     {/* 波紋 */}
     <motion.div
       key={`ripple-${pos}`}
-      className="absolute rounded-full top-16 left-16 border-blue-200 w-4 h-4 "
+      className="absolute rounded-full top-16 left-16 border-white w-4 h-4 "
       initial={false}
-      animate={{ scale: [1, 5], opacity: [0, 1, 0], borderWidth: ["8px", "0px"] }}
+      animate={{ scale: [1, 8], opacity: [0, 1, 0], borderWidth: ["6px", "0px"] }}
       transition={{
         scale: {
           delay: 0.1,
@@ -83,7 +83,7 @@ const Particle = ({ pos, Icon }: Props) => {
     {bubbles.map((bubble, index) => (
       <motion.div
         key={`bubble-${index}-${pos}`}
-        className="absolute rounded-full top-16 left-16 w-3 h-3 bg-blue-200"
+        className="absolute rounded-full top-16 left-16 w-3 h-3 bg-white"
         initial={false}
         animate={{
           opacity: [0, 1, 0],

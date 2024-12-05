@@ -2,25 +2,15 @@ import { memo } from "react"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Contents from "./components/contents/Index"
-// import Svg from "./components/Svg"
-// import Carousel from "./components/Carousel"
-// import { ScrollImages } from "./components/ScrollImages"
 
-// import { motion, useScroll, useSpring } from "framer-motion";
-// import './app.css'
 
 const App = () => {
 
-  // const { scrollYProgress } = useScroll();
-  // const scaleX = useSpring(scrollYProgress, {
-  //   stiffness: 100,
-  //   damping: 30,
-  //   restDelta: 0.001
-  // });
+
 
 
   return (
-    <main className="w-screen">
+    <main className="w-full">
       {/* <motion.div className="progress-bar" style={{ scaleX }} /> */}
 
       {/* <ScrollImages images={images} /> */}

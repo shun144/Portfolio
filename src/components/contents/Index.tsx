@@ -2,6 +2,7 @@ import { memo } from "react"
 import Home from "./Home";
 import About from "./about/About";
 import Skill from "./skill/Skill";
+import Work from "./work/Work";
 
 const Index = () => {
   return (
@@ -9,6 +10,7 @@ const Index = () => {
       <Home />
       <About />
       <Skill />
+      <Work />
     </div>
 
   )
