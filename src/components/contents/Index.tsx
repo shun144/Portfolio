@@ -3,6 +3,7 @@ import Home from "./Home";
 import About from "./about/About";
 import Skill from "./skill/Skill";
 import Work from "./work/Work";
+import Contact from "./contact/contact";
 
 const Index = () => {
   return (
@@ -11,6 +12,7 @@ const Index = () => {
       <About />
       <Skill />
       <Work />
+      <Contact />
     </div>
 
   )
