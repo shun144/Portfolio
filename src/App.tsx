@@ -1,35 +1,18 @@
-import { memo } from "react"
-import Header from "./components/Header"
-import Footer from "./components/Footer"
-import Contents from "./components/contents/Index"
-
+import { memo } from "react";
+import Header from "./components/header/Header";
+import Footer from "./components/Footer";
+import Contents from "./components/contents/Contents";
 
 const App = () => {
-
-
-
-
   return (
-    <main className="w-full">
-      {/* <motion.div className="progress-bar" style={{ scaleX }} /> */}
-
-      {/* <ScrollImages images={images} /> */}
+    <main className="w-full bg-slate-950">
       <Header />
-
       <Contents />
-      {/* <ScrollImages /> */}
-      {/* <Carousel /> */}
-
-      {/* <Svg/>   */}
-
       <Footer />
-
-    </main >
-  )
-}
-
-export default memo(App)
-
+    </main>
+  );
+};
+export default memo(App);
 
 // import Card from "./Card"
 
@@ -108,7 +91,6 @@ export default memo(App)
 //         {/* ポートフォリオ一覧 */}
 
 //       </div>
-
 
 //       {/* footer */}
 

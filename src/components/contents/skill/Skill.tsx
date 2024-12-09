@@ -1,41 +1,23 @@
-import { memo } from 'react'
-import Graph from './Graph';
-
-
-const FrontEndSkills: { [key: string]: number } = {
-  "JavaScript": 4,
-  "TypeScript": 5,
-  "HTML": 4,
-  "CSS/SCSS": 4,
-  "React": 4,
-  "Next.js": 3,
-  "Python": 2,
-  "Django": 2,
-}
-
-const BackEndSkills: { [key: string]: number } = {
-  "PHP": 3,
-  "Laravel": 3,
-  "Node.js": 3,
-  "C#": 3,
-}
+import { memo } from "react";
+import Graph from "./Graph";
+import { FrontEndSkills, BackEndSkills } from "./skilList";
+import { Section } from "@/type";
 
 const Skill = () => {
-  return (
-    <div className="w-full h-screen bg-amber-300">
+  const id: Section = "skills";
 
-      <div className="text-white text-8xl select-none flex justify-center items-center pt-20 pb-10">
+  return (
+    <div id={id} className="w-full min-h-section sm:pb-10 bg-slate-950">
+      <div className="text-white md:text-8xl text-6xl select-none flex justify-center items-center pt-20 pb-10">
         My Skill
       </div>
 
-
-      <div className="w-full h-3/4 flex justify-center items-center gap-x-10">
-        <Graph title="frontend skills" skillMap={FrontEndSkills} />
-        <Graph title="backend skills" skillMap={BackEndSkills} />
+      <div className="w-full flex lg:flex-row flex-col justify-center items-center md:gap-x-10 md:gap-y-12 gap-y-10">
+        <Graph title="frontend" skillMap={FrontEndSkills} />
+        <Graph title="backend" skillMap={BackEndSkills} />
       </div>
-
     </div>
-  )
-}
+  );
+};
 
 export default memo(Skill);

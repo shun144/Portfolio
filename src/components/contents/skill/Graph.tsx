@@ -1,40 +1,48 @@
-import { memo } from 'react'
+import { memo } from "react";
 
 type Props = {
-  title: string
-  skillMap: { [key: string]: number }
-}
+  title: string;
+  skillMap: { [key: string]: number };
+};
 
 const Graph = ({ title, skillMap }: Props) => {
   return (
-    <div className='w-5/12 h-full rounded-md pt-5'>
-      <div className='w-full flex justify-center items-center text-white uppercase text-4xl'>
+    <div className="md:w-9/12 w-11/12 min-w-[320px] rounded-xl md:pt-5 pt-2 bg-slate-900">
+      <div className="w-full flex justify-center items-center text-slate-300 uppercase md:text-4xl text-2xl">
         {title}
       </div>
 
-      <div className='w-11/12 mx-auto mt-10'>
-
-        {Object.keys(skillMap).map(key => (
-          <div key={key} className='flex justify-start items-center pb-8'>
-            <div className='w-4/12 flex justify-between items-center'>
-              <div className='text-white text-3xl font-extrabold'>{key}</div>
-              <div className='pr-5 text-white text-3xl font-extrabold'>{skillMap[key]}</div>
+      <div className="w-11/12 mx-auto md:mt-4 mt-2">
+        {Object.keys(skillMap).map((key) => (
+          <div
+            key={key}
+            className="flex justify-start items-center md:pb-4 sm:pb-6 pb-4 group"
+          >
+            <div className="md:w-4/12 w-5/12 flex justify-between items-center">
+              <div className="text-slate-400 sm:text-2xl text-lg break-all  font-extrabold group-hover:text-emerald-300">
+                {key}
+              </div>
             </div>
-            <div className='w-8/12 flex gap-x-4'>
-              {
-                [...Array(6)].map((_, i) => (<div key={i} className={`h-10 w-1/6 rounded-lg shadow ${i + 1 <= skillMap[key] ? "bg-white" : "border-2 border-dashed border-white"}`} />))
-              }
+            <div className="w-1/12 text-white md:text-3xl text-xl font-extrabold group-hover:text-emerald-300">
+              {skillMap[key]}
+            </div>
+            <div className="md:w-7/12 w-6/12 flex md:gap-x-4 sm:gap-x-4 gap-x-1">
+              {[...Array(6)].map((_, i) => (
+                <div
+                  key={i}
+                  className={`md:h-5 sm:h-6 h-3 w-1/6 md:rounded-md sm:rounded-lg rounded-sm shadow ${
+                    i + 1 <= skillMap[key]
+                      ? "bg-slate-200 group-hover:bg-emerald-300"
+                      : "border-2 border-dashed border-slate-500"
+                  }`}
+                />
+              ))}
             </div>
           </div>
         ))}
-
-
-
-
       </div>
-
     </div>
-  )
-}
+  );
+};
 
 export default memo(Graph);

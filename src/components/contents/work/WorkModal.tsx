@@ -8,14 +8,13 @@ type Props = {
 
 const WorkModal = ({ isOpenModal, setIsOpenModal }: Props) => {
 
-  const closeModal = () => {
+  const handleClose = () => {
     setIsOpenModal(false);
   }
 
   return (
     <>
-      <Modal show={isOpenModal} onClose={closeModal}>
-
+      <Modal show={isOpenModal} onClose={handleClose}>
         <div>aaa</div>
       </Modal >
     </>
