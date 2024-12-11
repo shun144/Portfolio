@@ -1,15 +1,15 @@
 import { PropsWithChildren, memo } from "react";
 import {
   Dialog,
-  DialogPanel,
+  // DialogPanel,
   Transition,
-  TransitionChild,
+  // TransitionChild,
 } from "@headlessui/react";
 
 const Modal = ({
-  children,
+  // children,
   show = false,
-  maxWidth = "2xl",
+  // maxWidth = "2xl",
   closeable = true,
   onClose = () => {},
 }: PropsWithChildren<{
@@ -24,13 +24,13 @@ const Modal = ({
     }
   };
 
-  const maxWidthClass = {
-    sm: "sm:max-w-sm",
-    md: "sm:max-w-md",
-    lg: "sm:max-w-lg",
-    xl: "sm:max-w-xl",
-    "2xl": "sm:max-w-2xl",
-  }[maxWidth];
+  // const maxWidthClass = {
+  //   sm: "sm:max-w-sm",
+  //   md: "sm:max-w-md",
+  //   lg: "sm:max-w-lg",
+  //   xl: "sm:max-w-xl",
+  //   "2xl": "sm:max-w-2xl",
+  // }[maxWidth];
 
   return (
     <Transition show={show} leave="duration-200">

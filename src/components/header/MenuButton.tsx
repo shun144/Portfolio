@@ -1,12 +1,11 @@
-import { motion } from "framer-motion";
-import { useState, memo, Dispatch, SetStateAction } from "react";
+import { memo, Dispatch, SetStateAction } from "react";
 
 interface Props {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-const MenuButton = ({ isOpen, setIsOpen }: Props) => {
+const MenuButton = ({ setIsOpen }: Props) => {
   return (
     <div className="flex justify-end items-center">
       <div
