@@ -16,7 +16,7 @@ const Home = () => {
       id={id}
       className="w-full h-screen max-h-screen min-h-section bg-slate-950 relative"
     >
-      <div className="w-full h-full flex flex-col justify-center items-center">
+      <div className="w-full h-full flex flex-col sm:justify-center justify-start sm:pt-0 pt-32 items-center">
         <div className="text-white text-8xl select-none sm:mx-0 mx-4">
           <div>Shun Labo.</div>
         </div>

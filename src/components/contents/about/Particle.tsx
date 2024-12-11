@@ -12,7 +12,7 @@ const bubbles = [
   { x: 120, y: -110 },
   { x: -120, y: -110 },
   { x: -120, y: 110 },
-];
+] as const;
 
 type Props = {
   pos: number;
@@ -25,7 +25,9 @@ const Particle = ({ pos, Icon }: Props) => {
   // 指定した位置以外は通常通りに表示し、指定位置のみ特殊なエフェクトを適用
   if (pos !== viewEffectPos) {
     return (
-      <Card Icon={Icon} className="absolute top-1 left-2 text-slate-200" />
+      <div className="h-40 w-40 absolute">
+        <Card icon={Icon} />
+      </div>
     );
   }
 
@@ -54,7 +56,7 @@ const Particle = ({ pos, Icon }: Props) => {
           },
         }}
       >
-        <Card Icon={Icon} className="absolute top-1 left-2 text-emerald-500" />
+        <Card icon={Icon} colorType="EMPHASIS" />
       </motion.div>
 
       {/* 波紋 */}

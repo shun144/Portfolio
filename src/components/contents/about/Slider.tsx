@@ -14,7 +14,7 @@ const posConfigs = [
   { x: "66.67%", duration: 1.5 },
   { x: "83.3%", duration: 1.9 },
   { x: "100%", duration: 2.2 },
-];
+] as const;
 
 const Slider = () => {
   const [centerIconIndex, setCenterIconIndex] = useState(3);
@@ -75,14 +75,15 @@ const Slider = () => {
 
   return (
     <>
-      <div className="slider relative overflow-hidden">
-        <div className="slider-wrapper h-52 relative overflow-hidden">
-          <div className="slider-inner absolute top-5 left-1/2">
-            <div className="slider-inner-cell absolute top-0 -left-[1150px] w-[2100px] h-20">
+      <div className="relative overflow-hidden">
+        <div className="sm:h-52 h-40 relative overflow-hidden">
+          <div className="absolute sm:top-5 top-0 left-1/2">
+            {/* <div className="absolute top-0 -left-[1150px] w-[2100px] h-20"> */}
+            <div className="absolute top-0 2xl:-left-[1330px] 2xl:w-[2500px] xl:-left-[990px] xl:w-[1800px] lg:-left-[1150px] lg:w-[2100px]  md:-left-[920px] md:w-[1700px]  sm:-left-[900px] sm:w-[1400px] -left-[430px] w-[700px] h-20">
               {postList.map((pos, index) => (
                 <motion.div
                   key={index}
-                  className="slider-li relative top-0"
+                  className="relative top-0"
                   initial={
                     0 < index && index < postList.length - 1
                       ? { x: posConfigs[0].x }
@@ -138,9 +139,7 @@ const Slider = () => {
             believe working in a multi-disciplined approach brings creative
             inspiration to my work. I am passionate about creating websites and
             web apps that incorporate interactive design and modern
-            technologies. I specialize in front-end development but also love
-            experimenting with new backend technologies, with the aim to improve
-            productivity, quality, performance and speed.
+            technologies.
           </p>
         </div>
       </div>

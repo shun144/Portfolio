@@ -11,19 +11,13 @@ const Work = () => {
     <div id={id} className="w-full h-screen min-h-section">
       <div className="w-full h-2/12 select-none flex flex-col justify-center items-center">
         <div className="text-white md:text-8xl text-6xl">Works</div>
-        <div className="text-slate-400 mt-2 sm:text-xl text-lg text-center">
+        <div className="text-slate-400 sm:text-xl text-lg text-center">
           過去に作成したサービス一覧
         </div>
       </div>
 
-      {/* <div className="select-none flex justify-center items-center">
-        <div className="w-11/12 h-1/12 text-slate-400 sm:text-xl text-lg text-center">
-          過去の案件で作成したアプリです
-        </div>
-      </div> */}
-
-      <div className="h-9/12 py-5">
-        {useMediaQuery(mediaQuery.md) ? <MobileCarousel /> : <PcCarousel />}
+      <div className="h-10/12">
+        {useMediaQuery(mediaQuery.lg) ? <PcCarousel /> : <MobileCarousel />}
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ const Skill = () => {
   const id: Section = "skills";
 
   return (
-    <div id={id} className="w-full min-h-section sm:pb-10 bg-slate-950">
+    <div id={id} className="w-full h-screen min-h-section">
       <div className="text-white md:text-8xl text-6xl select-none flex justify-center items-center pt-20 xl:pb-16 pb-10">
         My Skill
       </div>

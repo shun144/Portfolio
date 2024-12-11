@@ -5,11 +5,11 @@ import PcHeader from "./PcHeader";
 
 const Header = () => {
   if (useMediaQuery(mediaQuery.sm)) {
-    // スマホ用ヘッダー
-    return <MobileHeader />;
-  } else {
     // PC用ヘッダー
     return <PcHeader />;
+  } else {
+    // スマホ用ヘッダー
+    return <MobileHeader />;
   }
 };
 
