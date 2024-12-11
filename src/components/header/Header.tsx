@@ -4,9 +4,7 @@ import MobileHeader from "./MobileHeader";
 import PcHeader from "./PcHeader";
 
 const Header = () => {
-  const isSp = useMediaQuery(mediaQuery.sp);
-
-  if (isSp) {
+  if (useMediaQuery(mediaQuery.sm)) {
     // スマホ用ヘッダー
     return <MobileHeader />;
   } else {

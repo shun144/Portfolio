@@ -1,10 +1,10 @@
 import { memo, useEffect, useRef } from "react";
 // import Input from '../../../features/Input'
-import Sample from "../../../features/Input";
+// import Sample from "@/features/Input";
 import { Section } from "@/type";
 
 const contact = () => {
-  const refName = useRef<HTMLInputElement>(null);
+  // const refName = useRef<HTMLInputElement>(null);
   const ref = useRef<HTMLDivElement>(null);
 
   const id: Section = "contact";
@@ -29,7 +29,7 @@ const contact = () => {
             </p>
 
             <div className="w-full h-full mt-4">
-              <Sample ref={ref} />
+              {/* <Sample ref={ref} /> */}
 
               {/* <Input id="name" label="name" ref={refName} /> */}
               {/* <div className="w-96 relative z-0">
