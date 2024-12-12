@@ -29,7 +29,7 @@ interface Props {
 const MenuItem = ({ id, text, toggle }: Props) => {
   const handleClick = () => {
     toggle((prev) => !prev);
-    autoScroll(id);
+    autoScroll(id, 10);
   };
 
   return (

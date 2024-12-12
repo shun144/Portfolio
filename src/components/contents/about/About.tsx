@@ -6,8 +6,8 @@ const About = () => {
   const id: Section = "aboutme";
 
   return (
-    <div id={id} className="w-full h-screen min-h-section bg-slate-950">
-      <div className="text-white sm:text-8xl text-6xl select-none flex justify-center items-center pt-20 pb-10">
+    <div id={id} className="w-full h-screen min-h-section">
+      <div className="text-white sm:text-8xl text-6xl select-none flex justify-center items-center pb-10">
         About Me
       </div>
 

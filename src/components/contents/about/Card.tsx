@@ -12,7 +12,7 @@ type Props = {
 const Card = ({ icon: Icon, colorType = "STANDARD" }: Props) => {
   const breakpoint = useCurrentBreakpoint();
 
-  let iconSize = "70px";
+  let iconSize = "130px";
   switch (breakpoint) {
     case "sp":
     case undefined:
