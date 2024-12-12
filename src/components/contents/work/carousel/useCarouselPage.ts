@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { wrap } from "popmotion";
-import { workList } from "@/components/contents/work/workList";
+import { workList } from "@/components/contents/work/constants";
 
 export const swipeConfidenceThreshold = 10000;
 export const swipePower = (offset: number, velocity: number) => {

@@ -3,5 +3,5 @@ export const SectionMap = {
   aboutme: "About Me",
   skills: "My Skill",
   works: "Works",
-  contact: "Contact",
+  // contact: "Contact",
 } as const;

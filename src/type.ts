@@ -1,12 +1,12 @@
 // import { RefObject } from "react";
-import { IconType } from "react-icons";
+// import { IconType } from "react-icons";
 import { SectionMap } from "@/constants";
 
-type TechName = "HTML" | "CSS";
+type TechName = "HTML" | "CSS" | "React" | "TypeScript";
 
 type tech = {
   tecName: TechName;
-  techIcon: IconType;
+  // techIcon: IconType;
 };
 
 export type WorkInfo = {
@@ -19,9 +19,3 @@ export type WorkInfo = {
 };
 
 export type Section = keyof typeof SectionMap;
-
-// export type Section = keyof typeof SectionMap;
-
-// export type Anchor = {
-//   elem: RefObject<HTMLDivElement>;
-// };
