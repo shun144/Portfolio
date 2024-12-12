@@ -1,5 +1,5 @@
 import { WorkInfo } from "@/type";
-import { FaHtml5 } from "react-icons/fa";
+// import { FaHtml5 } from "react-icons/fa";
 // import { FaCss3 } from "react-icons/fa";
 export const workList: WorkInfo[] = [
   {
