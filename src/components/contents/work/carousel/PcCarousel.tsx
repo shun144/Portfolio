@@ -14,33 +14,33 @@ const PcCarousel = () => {
   const { page, direction, workIndex, paginate, workList } = useCarouselPage();
 
   return (
-    <div className="w-full h-full flex justify-center items-center">
-      <div className="2xl:w-8/12 xl:w-10/12 w-11/12 h-8/12 max-h-full flex justify-center items-center xl:gap-x-8 gap-x-4">
+    <div className="w-full flex justify-center items-center">
+      <div className="h-[500px] 2xl:w-7/12 xl:w-10/12 w-11/12  flex justify-center items-center xl:gap-x-8 gap-x-4 xl:mb-10 mb-6 ">
         {/* 製品紹介 */}
-        <div className="w-6/12 h-full flex flex-col  bg-slate-900 p-4 rounded-md border-2 border-white/30">
+        <div className="h-full w-6/12 flex flex-col bg-slate-900 p-4 rounded-md border-2 border-white/30">
           {/* ナンバリング */}
-          <div className="min-h-20 max-h-20 flex justify-start items-center">
+          <div className="flex justify-start items-center pb-4">
             <div className="text-7xl stroke-text">
               {String(workList[workIndex].id).padStart(2, "0")}
             </div>
           </div>
 
           {/* タイトル */}
-          <div className="min-h-20 max-h-20 flex justify-start items-center">
+          <div className=" flex justify-start items-center pb-4">
             <div className="text-white text-3xl tracking-widest">
               {workList[workIndex].title}
             </div>
           </div>
 
           {/* 詳細 */}
-          <div className="grow max-h-80">
+          <div className="grow">
             <p className="text-slate-400 text-lg tracking-widest">
               {workList[workIndex].explanation}
             </p>
           </div>
 
           {/* 使用言語 */}
-          <div className="min-h-10 max-h-10 flex justify-start items-center">
+          <div className="flex justify-start items-center">
             <div className="flex justify-start gap-x-2">
               {workList[workIndex].techList.map((tech, i) => (
                 <div key={i} className="text-emerald-500/85 text-xl">
@@ -53,18 +53,18 @@ const PcCarousel = () => {
           <div className="h-[1px] w-full bg-slate-500" />
 
           {/* 外部リンク */}
-          <div className="min-h-8 max-h-8 mt-2 flex justify-start items-center">
+          <div className="mt-2 flex justify-start items-center">
             <FaExternalLinkAlt className="text-xl text-slate-300 cursor-pointer" />
           </div>
         </div>
 
         {/* 画像スライダー */}
-        <div className="w-6/12 h-full flex justify-center items-center">
-          <div className="w-10/12 h-full flex justify-center items-center relative overflow-hidden">
+        <div className="h-full w-6/12 flex justify-center items-center">
+          <div className="w-full h-full flex justify-center items-center relative overflow-hidden">
             <AnimatePresence initial={false} custom={direction}>
               <motion.img
                 key={page}
-                className="absolute max-w-full rounded-md"
+                className="absolute w-full max-w-full rounded-md"
                 src={workList[workIndex].capture}
                 custom={direction}
                 variants={CarouselVariants}

@@ -7,7 +7,7 @@ type Props = {
 
 const Graph = ({ title, skillMap }: Props) => {
   return (
-    <div className="2xl:w-4/12 xl:w-5/12 lg:w-8/12 md:w-9/12 w-11/12 min-w-[320px] rounded-xl xl:pt-8 md:pt-5 pt-2 bg-slate-900">
+    <div className="2xl:w-4/12 xl:w-5/12 lg:w-7/12 md:w-9/12 w-11/12 rounded-xl xl:pt-8 md:pt-5 pt-2 bg-slate-900 overflow-auto">
       <div className="w-full flex justify-center items-center text-slate-300 uppercase md:text-4xl text-2xl">
         {title}
       </div>

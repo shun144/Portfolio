@@ -8,7 +8,7 @@ type Props = {
 
 const Input = forwardRef<HTMLInputElement, Props>(({ id, label }, ref) => {
   return (
-    <div className="w-96 relative z-0">
+    <div className="w-full relative z-0">
       <input
         type="text"
         id={id}
