@@ -124,7 +124,7 @@ const Slider = () => {
       </div>
 
       <div className="w-full flex justify-center items-center xl:pt-32 lg:pt-20 pt-10 lg:pb-20 sm:pb-12 pb-14 max-h-6 overflow-hidden sm:whitespace-normal whitespace-nowrap">
-        <div className="lg:text-7xl text-5xl text-white">
+        <div className="lg:text-7xl text-[43px] text-white">
           I Love{" "}
           <span className="text-emerald-400">
             {iconList[centerIconIndex].name}
