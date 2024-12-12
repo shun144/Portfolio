@@ -95,7 +95,7 @@ const Slider = () => {
             lg:-left-[1150px] lg:w-[2100px]  
             md:-left-[920px] md:w-[1700px]  
             sm:-left-[900px] sm:w-[1400px] 
-            -left-[835px] w-[1500px]"
+            -left-[965px] w-[1800px]"
             >
               {postList.map((pos, index) => (
                 <motion.div
@@ -124,7 +124,7 @@ const Slider = () => {
       </div>
 
       <div className="w-full flex justify-center items-center xl:pt-32 lg:pt-20 pt-10 lg:pb-20 sm:pb-12 pb-14 max-h-6 overflow-hidden sm:whitespace-normal whitespace-nowrap">
-        <div className="lg:text-7xl sm:text-5xl text-4xl text-white">
+        <div className="lg:text-7xl text-5xl text-white">
           I Love{" "}
           <span className="text-emerald-400">
             {iconList[centerIconIndex].name}
