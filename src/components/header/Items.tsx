@@ -38,9 +38,9 @@ const MenuItem = ({ id, text, toggle }: Props) => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      <motion.span className="text-slate-100 text-4xl" onClick={handleClick}>
+      <span className="text-slate-100 text-4xl" onClick={handleClick}>
         {text}
-      </motion.span>
+      </span>
     </motion.li>
   );
 };

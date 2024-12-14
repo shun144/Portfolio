@@ -16,16 +16,6 @@ const posConfigs = [
   { x: "100%", duration: 1.9 },
 ] as const;
 
-// const posConfigs = [
-//   { x: "0%", duration: 0 },
-//   { x: "16.6%", duration: 1.4 },
-//   { x: "33.3%", duration: 1.1 },
-//   { x: "50%", duration: 1.3 },
-//   { x: "66.67%", duration: 1.5 },
-//   { x: "83.3%", duration: 1.9 },
-//   { x: "100%", duration: 2.2 },
-// ] as const;
-
 const Slider = () => {
   const [centerIconIndex, setCenterIconIndex] = useState(3);
 
@@ -95,7 +85,7 @@ const Slider = () => {
             lg:-left-[1150px] lg:w-[2100px]  
             md:-left-[920px] md:w-[1700px]  
             sm:-left-[900px] sm:w-[1400px] 
-            -left-[965px] w-[1800px]"
+            -left-[980px] w-[1800px]"
             >
               {postList.map((pos, index) => (
                 <motion.div
@@ -137,8 +127,9 @@ const Slider = () => {
           {[
             { clickFunc: backStep, clickIcon: <FaArrowLeft /> },
             { clickFunc: nextStep, clickIcon: <FaArrowRight /> },
-          ].map(({ clickFunc, clickIcon }) => (
+          ].map(({ clickFunc, clickIcon }, index) => (
             <button
+              key={index}
               onClick={clickFunc}
               className="lg:text-7xl text-5xl text-slate-200 hover:text-emerald-300 transition-all duration-200"
             >
